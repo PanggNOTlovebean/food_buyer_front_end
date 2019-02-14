@@ -3,14 +3,14 @@
     <div class="img-container">
       <img class="main-food" src="./kaoyu.png" width="50%" height="100%">
       <div class="fish-name">
-        <input type="button" @click="food('鲶鱼')" value="鲶鱼">
-        <input type="button" @click="food('鲤鱼')" value="鲤鱼">
-        <input type="button" @click="food('草鱼')" value="草鱼">
-        <input type="button" @click="food('鲈鱼')" value="鲈鱼">
-        <input type="button" @click="food('鲟鱼')" value="鲟鱼">
+        <input type="button" @click="food('鲶鱼',48)" value="鲶鱼">
+        <input type="button" @click="food('鲤鱼',58)" value="鲤鱼">
+        <input type="button" @click="food('草鱼',68)" value="草鱼">
+        <input type="button" @click="food('鲈鱼',88)" value="鲈鱼">
+        <input type="button" @click="food('鲟鱼',88)" value="鲟鱼">
       </div>
       <img src="./jianghucai.png" width="50%" height="100%">
-      <button class="jianghucai" @click="food('黑椒牛肉粒')">黑
+      <button class="jianghucai" @click="food('黑椒牛肉粒',38)">黑
         <br>椒
         <br>牛
         <br>肉
@@ -21,35 +21,41 @@
 
     <div class="easy-foods">
       <img class="bg-img" src="./bg.png" width="100%">
-      <img class="paiguji" src="./paiguji.png" width="600px" height="400px" @click="food('排骨闷鸡卷子')">
+      <img
+        class="paiguji"
+        src="./paiguji.png"
+        width="600px"
+        height="400px"
+        @click="food('排骨闷鸡卷子',48)"
+      >
       <img
         class="suwanzi"
         src="./suwanzi.png"
         width="311px"
         height="413.25px"
-        @click="food('养生素丸子')"
+        @click="food('养生素丸子',20)"
       >
-      <img class="ouding" src="./ouding.png" width="310px" height="365px" @click="food('醋溜藕丁')">
+      <img class="ouding" src="./ouding.png" width="310px" height="365px" @click="food('醋溜藕丁',20)">
       <img
         class="xiaochaohuang"
         src="./xiaochaohuang.png"
         width="300px"
         height="365px"
-        @click="food('田园小炒皇')"
+        @click="food('田园小炒皇',18)"
       >
       <img
         class="haidaisi"
         src="./haidaisi.png"
         width="275px"
         height="500px"
-        @click="food('巧拌海带丝')"
+        @click="food('巧拌海带丝',8)"
       >
       <img
         class="dahuangyu"
         src="./dahuangyu.png"
         width="650px"
         height="450px"
-        @click="food('油焖大黄鱼')"
+        @click="food('油焖大黄鱼',46)"
       >
       <img class="bg-img2" src="./bg.png" width="100%">
       <img
@@ -57,44 +63,86 @@
         src="./chaxiangxia.png"
         width="649.75px"
         height="433px"
-        @click="food('一品茶香虾')"
+        @click="food('一品茶香虾',46)"
       >
-      <img class="jielan" src="./jielan.png" width="275.5px" height="339px" @click="food('白灼芥兰')">
-      <img class="chunsun" src="./chunsun.png" width="317px" height="362.5px" @click="food('鲍汁春笋')">
-      <img class="paobing" src="./paobing.png" width="618px" height="435px" @click="food('鱼头泡饼')">
-      <img class="sunjian" src="./sunjian.png" width="280px" height="384px" @click="food('干锅笋尖')">
-      <img class="xungan" src="./xungan.png" width="285px" height="395px" @click="food('金丝芹炒熏干')">
+      <img
+        class="jielan"
+        src="./jielan.png"
+        width="275.5px"
+        height="339px"
+        @click="food('白灼芥兰',20)"
+      >
+      <img
+        class="chunsun"
+        src="./chunsun.png"
+        width="317px"
+        height="362.5px"
+        @click="food('鲍汁春笋',25)"
+      >
+      <img
+        class="paobing"
+        src="./paobing.png"
+        width="618px"
+        height="435px"
+        @click="food('鱼头泡饼',46)"
+      >
+      <img
+        class="sunjian"
+        src="./sunjian.png"
+        width="280px"
+        height="384px"
+        @click="food('干锅笋尖',25)"
+      >
+      <img
+        class="xungan"
+        src="./xungan.png"
+        width="285px"
+        height="395px"
+        @click="food('金丝芹炒熏干',25)"
+      >
       
       <img class="bg-img3" src="./bg.png" width="100%">
-      <img class="lvrou" src="./lvrou.png" width="330px" height="380px" @click="food('驴肉拼盘')">
-      <img class="huanggua" src="./huanggua.png" width="225px" height="189px" @click="food('黄瓜蘸酱')">
-      <img class="shanyao" src="./shanyao.png" width="234px" height="191px" @click="food('蓝莓山药')">
+      <img class="lvrou" src="./lvrou.png" width="330px" height="380px" @click="food('驴肉拼盘',50)">
+      <img
+        class="huanggua"
+        src="./huanggua.png"
+        width="225px"
+        height="189px"
+        @click="food('黄瓜蘸酱',10)"
+      >
+      <img
+        class="shanyao"
+        src="./shanyao.png"
+        width="234px"
+        height="191px"
+        @click="food('蓝莓山药',15)"
+      >
       <img
         class="doufusi"
         src="./doufusi.png"
         width="378px"
         height="273px"
-        @click="food('高碑店豆腐丝 ')"
+        @click="food('高碑店豆腐丝 ',15)"
       >
       <img class="shan" src="./shan.png" width="253px" height="315px">
-      <img class="zhetou" src="./zhetou.png" width="282px" height="275px" @click="food('老醋蛰头')">
+      <img class="zhetou" src="./zhetou.png" width="282px" height="275px" @click="food('老醋蛰头',32)">
       <img
         class="laotanchunsun"
         src="./laotanchunsun.png"
         width="275px"
         height="260px"
-        @click="food('老坛春笋')"
+        @click="food('老坛春笋',15)"
       >
       <img
         class="niutijin"
         src="./niutijin.png"
         width="549px"
         height="320px"
-        @click="food('凉拌牛蹄筋')"
+        @click="food('凉拌牛蹄筋',30)"
       >
-      <img class="yecai" src="./yecai.png" width="264px" height="253px" @click="food('凉拌山野菜')">
-      <img class="yazhen" src="./yazhen.png" width="274px" height="261px" @click="food('麻辣鸡胗')">
-      <img class="egan" src="./egan.png" width="267px" height="352px" @click="food('一品鹅肝')">
+      <img class="yecai" src="./yecai.png" width="264px" height="253px" @click="food('凉拌山野菜',12)">
+      <img class="yazhen" src="./yazhen.png" width="274px" height="261px" @click="food('麻辣鸡胗',22)">
+      <img class="egan" src="./egan.png" width="267px" height="352px" @click="food('一品鹅肝',22)">
       <img class="chahushi" src="./chahushi.png" width="318px" height="351px">
       
       <img class="bg-img4" src="./bg.png" width="100%">
@@ -103,43 +151,53 @@
         src="./zhengdan.png"
         width="280px"
         height="586.5px"
-        @click="food('鲜虾干贝蒸蛋')"
+        @click="food('鲜虾干贝蒸蛋',25)"
       >
-      <img class="yangrou" src="./yangrou.png" width="271px" height="258px" @click="food('葱爆羊肉')">
-      <img class="zhuti" src="./zhuti.png" width="279px" height="260px" @click="food('葱烧猪蹄')">
-      <img class="feichang" src="./feichang.png" width="276px" height="321px" @click="food('干锅肥肠')">
+      <img
+        class="yangrou"
+        src="./yangrou.png"
+        width="271px"
+        height="258px"
+        @click="food('葱爆羊肉',32)"
+      >
+      <img class="zhuti" src="./zhuti.png" width="279px" height="260px" @click="food('葱烧猪蹄',28)">
+      <img
+        class="feichang"
+        src="./feichang.png"
+        width="276px"
+        height="321px"
+        @click="food('干锅肥肠',32)"
+      >
       <img class="liahu" src="./liahu.png" width="276px" height="418px">
-      <img class="doufu" src="./doufu.png" width="259px" height="235px" @click="food('干锅千页豆腐')">
+      <img class="doufu" src="./doufu.png" width="259px" height="235px" @click="food('干锅千页豆腐',22)">
       <img
         class="huanghuayu"
         src="./huanghuayu.png"
         width="259px"
         height="235px"
-        @click="food('干炸黄花鱼')"
+        @click="food('干炸黄花鱼',30)"
       >
       <img
         class="xiangchi"
         src="./xiangchi.png"
         width="259px"
         height="235px"
-        @click="food('锅巴蒜香翅')"
+        @click="food('锅巴蒜香翅',38)"
       >
-      <img class="yangza" src="./yangza.png" width="263px" height="235px" @click="food('锅仔羊杂')">
-      <img class="niuliu" src="./niuliu.png" width="259px" height="235px" @click="food('杭椒牛柳')">
-      <img class="huaha" src="./huaha.png" width="260px" height="235px" @click="food('辣炒花蛤')">
-      <img class="dupian" src="./dupian.png" width="260px" height="235px" @click="food('溜肚片')">
+      <img class="yangza" src="./yangza.png" width="263px" height="235px" @click="food('锅仔羊杂',28)">
+      <img class="niuliu" src="./niuliu.png" width="259px" height="235px" @click="food('杭椒牛柳',35)">
+      <img class="huaha" src="./huaha.png" width="260px" height="235px" @click="food('辣炒花蛤',25)">
+      <img class="dupian" src="./dupian.png" width="260px" height="235px" @click="food('溜肚片',32)">
       <img
         class="liufeichang"
         src="./liufeichang.png"
         width="260px"
         height="235px"
-        @click="food('溜肥肠')"
+        @click="food('溜肥肠',30)"
       >
     </div>
-    <el-dialog title="提示" :visible.sync="dialogVisible" width="30%" :before-close="handleClose">
-      <span slot="title" class="dialog-footer">
-        {{foodname}}
-      </span>
+    <el-dialog title="提示" :visible.sync="dialogVisible" width="30%">
+      <span slot="title" class="dialog-footer">{{foodname}}</span>
       <span>{{foodmsg}}</span>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">取 消</el-button>
@@ -153,25 +211,46 @@
 export default {
   data () {
     return {
-      dialogVisible:false,
-      foodname:"溜肚片",
-      foodmsg:"这个不好吃这个不好吃这个不好吃"
+      dialogVisible: false,
+      foodname: "溜肚片",
+      foodmsg: "这个不好吃这个不好吃这个不好吃",
+      foodprice: 0
     }
   },
   components: {
 
   },
   methods: {
-    food (name) {
-      this.dialogVisible=true;
-      this.foodname=name;
+    food (val, price) {
+      this.dialogVisible = true;
+      this.foodname = val;
+      this.foodprice = price;
     },
-    buy(){
-       this.dialogVisible=false;
-       this.$message({
-          message: '点单成功',
-          type: 'success',
-          duration:1000
+    buy () {
+      let that = this
+      this.dialogVisible = false;
+      var timestamp = parseInt(new Date().getTime() / 1000);
+      this.$axios.post('http://127.0.0.1:8080/api/create', {
+        id: timestamp,
+        name: this.foodname,
+        price: this.foodprice,
+        buyerId: sessionStorage.getItem("roomNum")
+      })
+        .then(function (response) {
+          if (response.data.code == 200)
+            that.$message({
+              message: '点单成功',
+              type: 'success',
+              duration: 1000
+            });
+          else
+            that.$message({
+              message: '点单失败',
+              type: 'fail',
+              duration: 1000
+            });
+        })
+        .catch(function () {
         });
     }
   },

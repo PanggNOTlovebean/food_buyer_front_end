@@ -12,6 +12,7 @@
       <el-menu-item index="1">菜谱</el-menu-item>
       <el-menu-item index="2">订单</el-menu-item>
     </el-menu>
+    <login></login>
     <component :is="comp"></component>
  </div>
 </template>
@@ -19,6 +20,7 @@
 <script type="text/ecmascript-6">
   import food from '@/components/food/food'
   import order from '@/components/order/order'
+  import login from '@/components/login/login'
   export default {
    data () {
      return {
@@ -29,6 +31,7 @@
    components: {
     food,
     order,
+    login
    },
    methods: {
      handleSelect (key) {
