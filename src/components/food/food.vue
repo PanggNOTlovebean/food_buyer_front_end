@@ -198,7 +198,10 @@
     </div>
     <el-dialog title="提示" :visible.sync="dialogVisible" width="30%">
       <span slot="title" class="dialog-footer">{{foodname}}</span>
-      <span>{{foodmsg}}</span>
+      
+      <span>价格：{{foodprice}}元/例</span>
+      <td class="line"></td>
+      <span>介绍：{{foodmsg}}</span>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">取 消</el-button>
         <el-button type="primary" @click="buy">购买</el-button>

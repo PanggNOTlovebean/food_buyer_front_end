@@ -10,7 +10,9 @@ export default new Vuex.Store({
     token:""
   },
   mutations: {
-
+    loginStateChanged(state,key) {
+      state.isLogin=key;
+    }
   },
   actions: {
 

@@ -18,10 +18,14 @@ export default {
   data () {
     return {
       canClosed:false,
-      visible:true,
       form: {
         number: '',
       }
+    }
+  },
+  computed:{
+    visible(){
+      return !this.$store.state.isLogin;
     }
   },
   components: {
@@ -29,7 +33,7 @@ export default {
   },
   methods:{
     onSubmit(){
-      this.visible=false;
+      this.$store.commit('loginStateChanged',true)
       sessionStorage.setItem("roomNum",this.form.number)
     }
   },
