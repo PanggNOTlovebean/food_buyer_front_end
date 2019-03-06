@@ -1,12 +1,13 @@
 <template>
   <div>
     <el-menu
-      :default-active="selected"
+      :default-active="defaultSelected"
+      :active="selected"
       class="el-menu-header"
       mode="horizontal"
       background-color="#333"
       active-text-color="#fff"
-      text-color="#ccc"
+      text-color="#ccc" 
       @select="handleSelect"
     >
       <el-menu-item index="3">退出</el-menu-item>
@@ -27,6 +28,7 @@ import login from '@/components/login/login'
 export default {
   data () {
     return {
+      defaultSelected:'1',
       selected: '1',
       comp: 'food',
       noLogin: true
@@ -56,6 +58,7 @@ export default {
       }
       else if (key === '2') {
         this.comp = 'order'
+
       }
       else {
         this.selected='1';

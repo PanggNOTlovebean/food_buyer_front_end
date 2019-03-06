@@ -215,8 +215,8 @@ export default {
   data () {
     return {
       dialogVisible: false,
-      foodname: "溜肚片",
-      foodmsg: "这个不好吃这个不好吃这个不好吃",
+      foodname: "",
+      foodmsg: "",
       foodprice: 0
     }
   },
@@ -224,10 +224,27 @@ export default {
 
   },
   methods: {
-    food (val, price) {
+    food (val) {
+      let that=this
       this.dialogVisible = true;
       this.foodname = val;
-      this.foodprice = price;
+      this.$axios.post('http://127.0.0.1:8080/api/getfood', {
+        name: this.foodname
+      })
+        .then(function (response) {
+          if (response.data.code == 200) {
+            that.foodprice=response.data.data.price;
+            that.foodmsg=response.data.data.introduction;
+          }
+          else
+            that.$message({
+              message: '请求失败',
+              type: 'fail',
+              duration: 1000
+            });
+        })
+        .catch(function () {
+        });
     },
     buy () {
       let that = this

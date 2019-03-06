@@ -35,6 +35,7 @@ export default {
     onSubmit(){
       this.$store.commit('loginStateChanged',true)
       sessionStorage.setItem("roomNum",this.form.number)
+      this.$forceUpdate();
     }
   },
 }
